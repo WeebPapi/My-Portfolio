@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box !important;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 300vh;
+}
+/* Hero and navbar */
+.hero {
+  width: 100vw;
+  height: 69vh;
+  background: url(../Images/SVG/Polygon\ Luminary.svg);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero h1 {
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: #ccc;
+}
+
+.hero-info {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+}
+.hero button {
+  background: #00bbd3;
+  border: 1px black solid;
+}
+.hero button:focus {
+  background: darkcyan;
+}
+
+.navbar {
+  height: 4rem;
+  background: black;
+  display: flex;
+  flex-direction: row;
+}
+.navbar .list-parent {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: center;
+}
+.navbar ul {
+  list-style: none;
+  margin-bottom: 0;
+  font-family: "Roboto Mono", monospace, Arial, Helvetica, sans-serif;
+}
+.navbar li {
+  display: inline;
+  margin-right: 12px;
+  font-size: 1.4rem;
+}
+.navbar a,
+.navbar a:visited {
+  color: #ccc;
+}
+.icon-container {
+  width: 20%;
+  height: 100%;
+}
+.coding-icon {
+  background: url(../Images/SVG/coding.svg);
+  width: 3.5rem;
+  height: 3.5rem;
+  align-self: center;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  animation-name: spin;
+  animation-duration: 2s;
+}
+.coding-icon:hover {
+  fill: darkblue;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 280px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-info {
+    text-align: center;
+  }
+  .navbar {
+    height: 3rem;
+  }
+  .navbar li {
+    font-size: 1.05rem;
+  }
+  .coding-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .hero-image {
+    width: 20rem;
+    height: auto;
+  }
+}
+@media screen and (min-width: 320px) {
+  .navbar li {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 468px) {
+  .hero-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  .navbar {
+    height: 4rem;
+  }
+  .navbar li {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 56vh;
+  }
+  .hero-info {
+    height: auto;
+    width: auto;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .hero-image {
+    width: 35rem;
+    height: 35rem;
+  }
+  .hero button {
+    transform: scale(1.2);
+  }
+  .navbar li {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 840px) {
+  .navbar {
+    height: 5rem;
+  }
+  .coding-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 2rem;
+    margin-right: 8rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+}
