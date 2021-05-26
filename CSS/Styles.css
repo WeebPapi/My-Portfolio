@@ -3,18 +3,22 @@
 *::before {
   box-sizing: border-box !important;
 }
+:root {
+  --color-primary: #00bbd3;
+}
 html {
   font-size: 62.5%;
 }
 body {
   width: 100vw;
-  height: 300vh;
+  height: 400vh;
+  background: url(../Images/SVG/Confetti-Doodles.svg);
 }
 /* Hero and navbar */
 .hero {
   width: 100vw;
-  height: 69vh;
-  background: url(../Images/SVG/Polygon\ Luminary.svg);
+  height: 75vh;
+  background: url(../Images/SVG/Polygon\ Luminary.svg) no-repeat;
   font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   display: flex;
@@ -49,6 +53,7 @@ body {
   display: flex;
   flex-direction: row;
 }
+
 .navbar .list-parent {
   display: flex;
   width: 80%;
@@ -70,12 +75,16 @@ body {
 .navbar a:visited {
   color: #ccc;
 }
+.navbar a:focus {
+  color: var(--color-primary);
+  transition: color 0.5s;
+}
 .icon-container {
   width: 20%;
   height: 100%;
 }
 .coding-icon {
-  background: url(../Images/SVG/coding.svg);
+  background: url(../Images/SVG/coding.svg) no-repeat;
   width: 3.5rem;
   height: 3.5rem;
   align-self: center;
@@ -97,7 +106,7 @@ body {
 }
 @media screen and (min-width: 280px) {
   .hero {
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   .hero-info {
@@ -136,15 +145,20 @@ body {
   .navbar li {
     font-size: 1.3rem;
   }
+  .hero-image {
+    width: 25rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    height: 56vh;
+    height: 100vh;
   }
+}
+@media screen and (min-width: 800px) {
   .hero-info {
     height: auto;
     width: auto;
@@ -164,6 +178,7 @@ body {
     font-size: 1.7rem;
   }
 }
+
 @media screen and (min-width: 840px) {
   .navbar {
     height: 5rem;
@@ -176,4 +191,127 @@ body {
   }
 }
 @media screen and (min-width: 1000px) {
+  .navbar {
+    position: fixed;
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 1366px) {
+  .hero-image,
+  .hero-info {
+    margin-bottom: 60%;
+  }
+}
+@media screen and (min-width: 1025px) and (min-height: 1367px) {
+  .hero-image,
+  .hero-info {
+    margin-bottom: 0;
+  }
+} /* About Me Section */
+.about_me {
+  background: url(../Images/SVG/Colored\ Patterns.svg) no-repeat;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.about_me h2 {
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: #ccc;
+}
+/* .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+} */
+.sexy-pic {
+  width: 30rem;
+  height: auto;
+  object-fit: cover;
+}
+.about_me_text {
+  width: 40ch;
+}
+.social_links {
+  justify-self: center;
+}
+.git-icon,
+.fb-icon,
+.ig-icon,
+.yt-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 3rem;
+  display: inline-block;
+}
+.git-icon {
+  background: url(../Images/SVG/Social\ Links/github.svg);
+}
+.fb-icon {
+  background: url(../Images/SVG/Social\ Links/facebook.svg);
+}
+.ig-icon {
+  background: url(../Images/SVG/Social\ Links/instagram.svg);
+}
+.yt-icon {
+  background: url(../Images/SVG/Social\ Links/youtube.svg);
+}
+@media screen and (min-width: 320px) {
+  .about_me {
+    font-size: 1.2rem;
+    height: auto;
+    margin-top: 10vh;
+  }
+  .sexy-pic {
+    width: 20rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .about_me {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    height: auto;
+  }
+  .sexy-pic {
+    width: 25rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  .about_me {
+    font-size: 1.6rem;
+    height: auto;
+  }
+  .sexy-pic {
+    width: 30rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .about_me {
+    background: url(../Images/SVG/Colored\ Patterns.svg);
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+  }
+
+  .sexy-pic {
+    min-width: 40rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about_me {
+    height: 100vh;
+  }
 }
