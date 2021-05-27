@@ -129,7 +129,10 @@ body {
 }
 @media screen and (min-width: 320px) {
   .navbar li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  .navbar {
+    width: 100%;
   }
 }
 @media screen and (min-width: 468px) {
@@ -194,6 +197,7 @@ body {
   .navbar {
     position: fixed;
     width: 100vw;
+    z-index: 200;
   }
 }
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
@@ -268,7 +272,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   .about_me {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     height: auto;
     margin-top: 10vh;
   }
@@ -313,5 +317,135 @@ body {
 @media screen and (min-width: 1024px) {
   .about_me {
     height: 100vh;
+  }
+}
+/* Cards */
+.services {
+  width: 100vw;
+  height: 290vh;
+  font-size: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.services h3 {
+  color: black;
+  font-size: 3rem;
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+}
+.cards {
+  width: 100vw;
+  height: 290vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  box-shadow: 0 0 20px 10px #ccc;
+  width: 30rem;
+  height: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card_heading {
+  height: auto;
+  background: rgb(40, 168, 140);
+  background: linear-gradient(
+    270deg,
+    rgba(40, 168, 140, 1) 0%,
+    rgba(0, 187, 211, 1) 100%
+  );
+  color: #e0e0e0;
+}
+.card_heading h4 {
+  padding: 0.4rem 0.7rem;
+  margin: 0;
+  color: white;
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  display: inline-block;
+  width: auto;
+}
+.card_heading p {
+  margin: 0;
+  padding: 0rem 1rem;
+  color: white;
+}
+.card_heading p:first-of-type {
+  font-size: 2.5rem;
+  color: #f5f6f7;
+}
+.card_body {
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.card .card_body button {
+  color: var(--color-primary);
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 1rem;
+  border-color: var(--color-primary);
+}
+.card_body img {
+  height: auto;
+  width: 100%;
+}
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2.5rem;
+  white-space: nowrap;
+  background: royalblue;
+  display: inline-block;
+}
+
+@media screen and (min-width: 320px) {
+  .card {
+    transform: scale(0.75);
+  }
+}
+@media screen and (min-width: 360px) {
+  .card {
+    transform: scale(0.85);
+  }
+}
+@media screen and (min-width: 375px) {
+  .card {
+    transform: scale(0.9);
+  }
+}
+@media screen and (min-width: 400px) {
+  .card {
+    transform: scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    transform: scale(1.5);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .services {
+    height: 60vh;
+  }
+  .cards {
+    flex-direction: row;
+    height: 80vh;
+  }
+  .card {
+    transform: scale(1);
+    height: 59rem;
+  }
+  .card_body {
+    object-fit: cover;
   }
 }
