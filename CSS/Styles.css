@@ -11,8 +11,9 @@ html {
 }
 body {
   width: 100vw;
-  height: 450vh;
+  height: 500vh;
   background: url(../Images/SVG/Confetti-Doodles.svg);
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Hero and navbar */
@@ -27,6 +28,20 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.learn_more_container {
+  font-size: 1.5rem;
+  background-color: black;
+  color: var(--color-primary);
+}
+.learn_more {
+  color: var(--color-primary);
+}
+.learn_more:hover {
+  margin-right: 8px;
+  transition: margin-right 0.4s;
+}
+
 .hero h1 {
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
   font-size: 3rem;
@@ -101,6 +116,7 @@ body {
 .coding-icon:hover {
   fill: darkblue;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -138,6 +154,9 @@ body {
   }
   .navbar {
     width: 100%;
+  }
+  .hero-info {
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 468px) {
@@ -206,9 +225,28 @@ body {
   }
 }
 @media screen and (min-width: 1024px) and (min-height: 1366px) {
+  body {
+    height: auto !important;
+  }
+  .about_me {
+    height: 60vh !important;
+  }
+  .services {
+    height: 100vh !important;
+  }
   .hero-image,
   .hero-info {
     margin-bottom: 60%;
+  }
+  .services {
+    justify-content: center !important;
+  }
+  .services h3 {
+    font-size: 4rem !important;
+  }
+  .contact_me {
+    margin-top: 0 !important;
+    height: 70vh !important;
   }
 }
 @media screen and (min-width: 1025px) and (min-height: 1367px) {
@@ -337,7 +375,6 @@ body {
   align-items: center;
 }
 .services h3 {
-  color: black;
   font-size: 3rem;
   font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
 }
@@ -414,8 +451,12 @@ body {
 }
 
 @media screen and (min-width: 320px) {
+  body {
+    height: 600vh;
+  }
   .card {
-    transform: scale(0.75);
+    transform: scale(0.8);
+    overflow: auto;
   }
 }
 @media screen and (min-width: 360px) {
@@ -424,6 +465,9 @@ body {
   }
 }
 @media screen and (min-width: 375px) {
+  body {
+    height: 500vh;
+  }
   .card {
     transform: scale(0.9);
   }
@@ -482,10 +526,104 @@ body {
     transform: scale(1);
   }
 }
+.contact_me {
+  height: 50vh;
+}
+.contact_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.contact_me form {
+  margin: 0;
+}
+.heading_container {
+  display: inline-block;
+}
+.contact_me h5 {
+  font-size: 3rem;
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+}
+.contact_me label {
+  font-size: 1.4rem;
+}
+.contact_me #email {
+  width: 30ch;
+  background-color: white;
+}
+.contact_me textarea {
+  height: 10rem;
+  width: 30ch;
+  display: block;
+  background-color: white;
+}
+.contact_me form button {
+  background-color: var(--color-primary);
+  border-color: black;
+  text-align: center;
+}
+
 .footer {
   width: 100vw;
   height: 40vh;
   background: url(../Images/SVG/Colored\ Shapes.svg);
   position: relative;
-  top: 13%;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #cfcfcf;
+}
+.footer h6 {
+  font-size: 3rem;
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+.footer a {
+  color: var(--color-primary);
+}
+@media screen and (min-width: 320px) {
+  .contact_me {
+    margin-top: 25vh;
+  }
+  .footer {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .contact_me {
+    margin-top: 0;
+  }
+  .footer {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  .hero {
+    height: 60vh;
+  }
+  .contact_me {
+    margin-top: 10rem;
+    transform: scale(1.3);
+  }
+  .footer {
+    font-size: 2.5rem;
+  }
+  .footer h6 {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    height: 450vh;
+  }
+  .contact_me {
+    margin-top: 10rem;
+  }
 }

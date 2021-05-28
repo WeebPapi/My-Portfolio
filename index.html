@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="Images/SVG/coding.svg">
+    <script src="https://use.fontawesome.com/2058ea432d.js"></script>
+    <script src="https://kit.fontawesome.com/5cffbc4050.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,15 +23,18 @@
             <li> <a href="#">Home</a></li>
             <li><a href="#about_me">About Me</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#">Contact Me</a></li>
+            <li><a href="#contact_me">Contact Me</a></li>
             </ul>
         </span>
        </nav>
        <section class="hero">
         <img class="hero-image" src="Images/laptop-art.png" alt="A graphic of a computer running a code editor">
         <div class="hero-info">
-            <h1>Web Design Services</h1>
-            <button>Get Started</button>
+            <h1>Web Designer</h1>
+            <div class="learn_more_container">
+                <a href="#about_me" class="learn_more">Learn More</a>
+                <i class="fas fa-long-arrow-alt-right icon-blue"></i>
+            </div>
         </div>
        </section>
        
@@ -85,8 +91,28 @@
        
        </div>
        </section>
+       <section class="contact_me" id="contact_me">
+           <div class="contact_container">
+               <div class="heading_container">
+                   <h5>Contact Me</h5>
+               </div>
+               <form action="https://formspree.io/f/xayaoeza" method="post">
+                <label for="email">Your E-Mail Address</label>
+                <input type="email" name="email" id="email" placeholder="E-Mail" required>
+                <label for="body">Questions</label>
+                <textarea cols="30" rows="10" name="body" id="body" placeholder="Anything you may want to ask me" required></textarea>
+                <button type="submit">Send Email</button>
+                <button type="reset">Clear All Fields</button>
+                </form>
+           </div>
+       </section>
        <section class="footer">
-           
+           <h6>Attributions</h6>
+           <div class="attributions">
+            <div>Icons made by <a href="" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <a href="https://www.vecteezy.com/free-vector/web-design">Web Design Vectors by Vecteezy</a>           
+           </div>
        </section>
 </body>
 </html>
