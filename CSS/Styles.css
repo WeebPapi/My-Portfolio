@@ -6,6 +6,10 @@
 :root {
   --color-primary: #00bbd3;
 }
+html,
+body {
+  margin: 0;
+}
 html {
   font-size: 62.5%;
 }
